@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'odd-even-game';
+
+  evenList:number[] = []
+  oddList:number[] = []
+  
+  eventData(eventNumber: number){
+    if(eventNumber % 2 == 0){
+      this.evenList.push(eventNumber);
+    }else{
+      this.oddList.push(eventNumber);
+    }
+  }
 }
